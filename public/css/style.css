@@ -1,61 +1,117 @@
 body {
-  font-family: 'PT Sans', sans-serif;
+    font-family: 'Kreon', serif;
 }
 
 .container-fluid {
-  padding: 0;
+    padding: 0;
 }
 
 button {
-  background-color: rgb(20,55,130)!important;
-  color: white!important;
-  width: 300px;
-  height: 60px;
-  font-size: 20px!important;
-  border-radius: 8px!important;
+    background-color: rgb(20, 55, 130)!important;
+    color: white!important;
+    width: 280px;
+    height: 60px;
+    font-size: 21px!important;
+    font-weight: bold!important;
+    border-radius: 8px!important;
+}
+
+button:hover {
+  background-color: rgb(20, 55, 110)!important;
 }
 
 .AddElement {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: rgb(240,240,240);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 40px;
 }
 
 h2 {
-  margin: 0px;
+    margin: 0 0 0 50px;
 }
 
 .search {
-  margin-top: 30px;
+    margin-top: 30px;
+}
+
+.input-group {
+  margin-right: 50px;
 }
 
 .container {
-  width: 95%;
+    width: 95%;
 }
 
 .element {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  background-color: rgb(240,230,230);
-  height: 150px;
-  border-radius: 15px;
+    margin-top: 20px;
+    background-color: rgb(240, 230, 230);
+    height: 150px;
+    border-radius: 15px;
 }
 
 .techno {
-  padding-left: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .infos {
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 1px solid rgb(220, 210, 210);
+    height: 150px;
 }
 
 p {
-  font-size: 20px;
-  margin: 0;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.core {
+    height: 150px;
+    border-right: 1px solid rgb(220, 210, 210);
+    padding-top: 10px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.participation {
+  height: 150px;
+  border-right: 1px solid rgb(220, 210, 210);
+  padding-top: 20px;
   text-align: center;
+  cursor: pointer;
+}
+
+.participation:hover {
+    background-color: rgb(230, 220, 220);
+}
+
+.entry {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.modification {
+  height: 150px;
+  padding-top: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modification:hover {
+  background-color: rgb(230, 220, 220);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.edit {
+  padding-top: 10px;
+  font-size: 18px;
 }

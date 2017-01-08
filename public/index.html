@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ConfApp">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kreon" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/fonts/glyphicons-halflings-regular.ttf" rel="stylesheet">
     <title>Conférences</title>
 </head>
@@ -29,13 +29,14 @@
                     <form>
                         <div class="input-group">
                             <input type="text" placeholder="Chercher une conférence..." class="form-control research">
-                            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="col-xs-12 element">
             <div class="row">
@@ -47,14 +48,47 @@
                     <p>18h30-22h30</p><br/>
                     <p>La Paillasse, Paris</p>
                 </div>
-                <div class="col-xs-6">
-                  <p>L'avenir d'Angular et les changements de rupture par Igor Minar</p>
+                <div class="col-xs-7 core">
+                    <p class="title">L'avenir d'Angular et les changements de rupture par Igor Minar</p>
                 </div>
-                <div class="col-xs-2"></div>
+                <div class="col-xs-1 participation">
+                  <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
+                  <p class="entry">115 participants</p>
+                </div>
+                <div class="col-xs-1 modification">
+                  <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
+                  <p class="edit">éditer la conférence</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 element">
+            <div class="row">
+                <div class="col-xs-1 techno">
+                    <img src="img/react.png">
+                </div>
+                <div class="col-xs-2 infos">
+                    <p>SAMEDI 28 JANVIER</p> <br/>
+                    <p>15h30-20h30</p><br/>
+                    <p>Startup Palace, Nantes</p>
+                </div>
+                <div class="col-xs-7 core">
+                    <p class="title">Pourquoi les entreprises ont elles confiance en React par Jordan Walke</p>
+                </div>
+                <div class="col-xs-1 participation">
+                  <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
+                  <p class="entry">97 participants</p>
+                </div>
+                <div class="col-xs-1 modification">
+                  <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
+                  <p class="edit">éditer la conférence</p>
+                </div>
             </div>
         </div>
 
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
 </body>
 
 </html>
