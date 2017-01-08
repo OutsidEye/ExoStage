@@ -1,0 +1,120 @@
+<div class="container-fluid">
+    <div class="col-xs-12 AddElement">
+        <button type="button" class="btn btn-default" ng-click="vm.toggleModalAddConf()">Ajouter une conférence</button>
+    </div>
+
+    <modal title="Add Conference Form" visible="showModalAdd">
+        <form name="vm.conferenceForm" role="form" ng-submit="vm.addConference()">
+            <div class="form-group">
+                  <label for="select">Technologie</label>
+                <select class="form-control" ng-model="vm.image" id="select">
+                  <option>angular</option>
+                  <option>react</option>
+                  <option>vue</option>
+                  <option>javascript</option>
+                  <option>ember</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="datepicker">Date</label>
+                <input type="text" class="form-control" ng-model="vm.date" id="datepicker" placeholder="dd/mm/yyyy" />
+            </div>
+            <div class="form-group">
+                <label for="hourpicker">Heure</label>
+                <input type="text" class="form-control" ng-model="vm.hour" id="hourpicker" placeholder="hh:mm" />
+            </div>
+            <div class="form-group">
+                <label for="adresse">Adresse</label>
+                <input type="text" class="form-control" ng-model="vm.adresse" id="adresse" placeholder="Entrer adresse" />
+            </div>
+            <div class="form-group">
+                <label for="ville">Ville</label>
+                <input type="text" class="form-control" ng-model="vm.ville" id="ville" placeholder="Entrer ville" />
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" ng-model="vm.nom" id="nom" placeholder="Entrer nom conférence" />
+            </div>
+            <button type="submit" class="btn btn-default">Valider</button>
+        </form>
+    </modal>
+
+    <modal title="Edit Conference Form" visible="showModalEdit">
+        <form name="vm.conferenceUpdateForm" role="form" ng-submit="vm.updateConference(vm.conference._id)">
+            <div class="form-group">
+                  <label for="select">Technologie</label>
+                <select class="form-control" ng-model="vm.conference.image" id="select">
+                  <option>angular</option>
+                  <option>react</option>
+                  <option>vue</option>
+                  <option>javascript</option>
+                  <option>ember</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="datepicker">Date</label>
+                <input type="text" class="form-control" ng-model="vm.conference.dateUpdate" id="datepicker" placeholder="dd/mm/yyyy" />
+            </div>
+            <div class="form-group">
+                <label for="hourpicker">Heure</label>
+                <input type="text" class="form-control" ng-model="vm.conference.hour" id="hourpicker" placeholder="hh:mm" />
+            </div>
+            <div class="form-group">
+                <label for="adresse">Adresse</label>
+                <input type="text" class="form-control" ng-model="vm.conference.adresse" id="adresse" placeholder="Entrer adresse" />
+            </div>
+            <div class="form-group">
+                <label for="ville">Ville</label>
+                <input type="text" class="form-control" ng-model="vm.conference.ville" id="ville" placeholder="Entrer ville" />
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" ng-model="vm.conference.nomConference" id="nom" placeholder="Entrer nom conférence" />
+            </div>
+            <button type="submit" class="btn btn-default">Valider</button>
+        </form>
+    </modal>
+
+    <div class="col-xs-12 search">
+        <div class="row">
+            <div class="col-xs-9">
+                <h2>TOUTES LES CONFERENCES</h2>
+            </div>
+            <div class="col-xs-3">
+                <form>
+                    <div class="input-group">
+                        <input type="text" ng-model="nameSearch.nomConference" placeholder="Chercher une conférence..." class="form-control research">
+                        <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-xs-12 element" ng-repeat="conference in vm.conferences | filter: nameSearch">
+        <div class="row">
+            <div class="col-xs-1 techno">
+                <img ng-src="{{'img/' + conference.image + '.png'}}">
+            </div>
+            <div class="col-xs-2 infos">
+                <p>{{conference.date | date:"EEEE d MMMM"}}</p> <br/>
+                <p>{{conference.date | date:"HH:mm"}}</p><br/>
+                <p>{{conference.adresse}}, {{conference.ville}}</p>
+            </div>
+            <div class="col-xs-7 core">
+                <p class="title">{{conference.nomConference}}</p>
+            </div>
+            <div class="col-xs-1 participation" ng-click="vm.addParticipants(conference)">
+                <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
+                <p class="entry">{{conference.participants}} participants</p>
+            </div>
+            <div class="col-xs-1 modification" ng-click="vm.toggleModalEditConf(conference._id)">
+                <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
+                <p class="edit">éditer la conférence</p>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ConfApp">
+<html lang="en" ng-app="ConferenceApp">
 
 <head>
     <meta charset="UTF-8">
@@ -14,81 +14,18 @@
 </head>
 
 <body>
+  <main ng-view></main>
 
-    <div class="container-fluid">
-        <div class="col-xs-12 AddElement">
-            <button type="button" class="btn btn-default">Ajouter une conférence</button>
-        </div>
-
-        <div class="col-xs-12 search">
-            <div class="row">
-                <div class="col-xs-9">
-                    <h2>TOUTES LES CONFERENCES</h2>
-                </div>
-                <div class="col-xs-3">
-                    <form>
-                        <div class="input-group">
-                            <input type="text" placeholder="Chercher une conférence..." class="form-control research">
-                            <div class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="col-xs-12 element">
-            <div class="row">
-                <div class="col-xs-1 techno">
-                    <img src="img/angular.png">
-                </div>
-                <div class="col-xs-2 infos">
-                    <p>MERCREDI 25 JANVIER</p> <br/>
-                    <p>18h30-22h30</p><br/>
-                    <p>La Paillasse, Paris</p>
-                </div>
-                <div class="col-xs-7 core">
-                    <p class="title">L'avenir d'Angular et les changements de rupture par Igor Minar</p>
-                </div>
-                <div class="col-xs-1 participation">
-                  <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
-                  <p class="entry">115 participants</p>
-                </div>
-                <div class="col-xs-1 modification">
-                  <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
-                  <p class="edit">éditer la conférence</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 element">
-            <div class="row">
-                <div class="col-xs-1 techno">
-                    <img src="img/react.png">
-                </div>
-                <div class="col-xs-2 infos">
-                    <p>SAMEDI 28 JANVIER</p> <br/>
-                    <p>15h30-20h30</p><br/>
-                    <p>Startup Palace, Nantes</p>
-                </div>
-                <div class="col-xs-7 core">
-                    <p class="title">Pourquoi les entreprises ont elles confiance en React par Jordan Walke</p>
-                </div>
-                <div class="col-xs-1 participation">
-                  <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i>
-                  <p class="entry">97 participants</p>
-                </div>
-                <div class="col-xs-1 modification">
-                  <i class="fa fa-pencil fa-4x" aria-hidden="true"></i>
-                  <p class="edit">éditer la conférence</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/i18n/angular-locale_fr-fr.js"></script>
+    <script src="angular-app/app.js"></script>
+    <script src="angular-app/conferences/conferencesCtrl.js"></script>
+    <script src="angular-app/conferences/conferencesFactory.js"></script>
+    <script src="angular-app/conferences/conferencesDirective.js"></script>
 </body>
 
 </html>
